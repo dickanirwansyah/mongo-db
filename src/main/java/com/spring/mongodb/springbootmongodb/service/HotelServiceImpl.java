@@ -28,4 +28,9 @@ public class HotelServiceImpl implements HotelService{
     public Hotel updatedHotel(HotelModel hotel) {
         return hotelDao.updatedHotel(hotel);
     }
+
+    @Override
+    public void deleteHotel(String idhotel) {
+        hotelDao.deleteHotel(idhotel);
+    }
 }

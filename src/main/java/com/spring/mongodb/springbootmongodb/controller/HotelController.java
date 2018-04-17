@@ -39,4 +39,14 @@ public class HotelController {
                 .map(resultset -> new ResponseEntity<>(resultset, HttpStatus.OK))
                 .orElse(new ResponseEntity<Hotel>(HttpStatus.BAD_REQUEST));
     }
+
+    @DeleteMapping(value = "/deleted/{id}")
+    public ResponseEntity<Void> deleteHotel(@PathVariable String id){
+        hotelService.deleteHotel(id);
+        if(id == null){
+            return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
 }

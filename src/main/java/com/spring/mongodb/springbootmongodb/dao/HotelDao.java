@@ -10,6 +10,7 @@ public interface HotelDao {
     List<Hotel> listHotel();
     Hotel createdHotel(HotelModel hotel);
     Hotel updatedHotel(HotelModel hotel);
+    void deleteHotel(String idhotel);
     Hotel findId(String idhotel);
     Hotel findHotel(String name);
 }

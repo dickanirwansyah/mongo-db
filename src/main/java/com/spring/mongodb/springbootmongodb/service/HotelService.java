@@ -10,4 +10,5 @@ public interface HotelService {
     List<Hotel> listHotel();
     Hotel createdHotel(HotelModel hotel);
     Hotel updatedHotel(HotelModel hotel);
+    void deleteHotel(String idhotel);
 }

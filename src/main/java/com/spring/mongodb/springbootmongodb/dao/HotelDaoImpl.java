@@ -66,6 +66,11 @@ public class HotelDaoImpl implements HotelDao{
     }
 
     @Override
+    public void deleteHotel(String idhotel) {
+        hotelRepository.delete(idhotel);
+    }
+
+    @Override
     public Hotel findId(String idhotel) {
         return null;
     }
